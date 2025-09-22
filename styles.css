@@ -116,16 +116,125 @@ nav a:hover i {
     transform: scale(1.1); /* Enlarge icon on hover */
 }
 
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column; /* Stack links vertically on smaller screens */
-        padding: 10px;
-    }
+/* Color Variables */
+:root {
+    --main-color: #BFCA90;
+    --dark-green: #3B5B2A;
+    --black-color: #000000;
+    --dark-text: #333333;
+}
 
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--dark-text);
+    background-color: #f9f9f9;
+}
+
+/* Header Styles */
+header {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: var(--dark-green);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--main-color);
+    color: var(--dark-green);
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.top {
+    background-color: rgba(161, 18, 199, 0.29);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.top h1 {
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.top p {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    line-height: 1.6;
+}
+
+.coffee-image {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: white;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+footer .social-icon {
+    width: 40px;
+    margin-top: 10px;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .top h1 {
+        font-size: 28px;
+    }
+    .top p {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    nav {
+        flex-direction: column;
+    }
     nav a {
-        margin: 10px 0; /* Space between stacked links */
+        font-size: 16px;
+        padding: 8px 12px;
+        margin: 5px 0;
+    }
+    .coffee-image {
+        max-width: 90%;
+        height: auto;
     }
 }
+
 
 .image-container {
   display: flex;
